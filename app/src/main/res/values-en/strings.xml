@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppVamosRachar in English</string>
+    <string name="preencha_todos_campos">Fill in All Fields!</string>
+    <string name="money_total">US$: 0.00</string>
+    <string name="vamos_nrachar">Lets\nGo!</string>
+    <string name="dinheiro">money</string>
+    <string name="pessoas">people</string>
+
+
+
+</resources>

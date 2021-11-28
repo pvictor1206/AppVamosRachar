@@ -3,4 +3,7 @@
     <string name="preencha_todos_campos">Preencha Todos os Campos!</string>
     <string name="money_total">R$: 0.00</string>
     <string name="vamos_nrachar">VAMOS\nRACHAR!</string>
+    <string name="dinheiro">dinheiro</string>
+    <string name="pessoas">pessoas</string>
+
 </resources>

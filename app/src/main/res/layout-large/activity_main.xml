@@ -17,7 +17,7 @@
         android:contentDescription="Bem vindo ao Vamos Rachar!"
         android:text="@string/vamos_nrachar"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -25,10 +25,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="308dp"
+        android:layout_height="85dp"
         android:layout_marginTop="20dp"
         android:contentDescription="inserir informações do dinheiro"
         android:ems="10"
@@ -36,17 +37,18 @@
         android:inputType="numberDecimal"
         android:shadowColor="#FFFFFF"
         android:textColor="#FFFFFF"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintHorizontal_bias="0.823"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintVertical_bias="0.132" />
 
     <EditText
         android:id="@+id/editTextNumberDecimal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="333dp"
+        android:layout_height="88dp"
         android:layout_marginTop="20dp"
         android:contentDescription="inserir quantidade de pessoas"
         android:ems="10"
@@ -54,12 +56,13 @@
         android:inputType="number"
         android:shadowColor="#FFFFFF"
         android:textColor="#FFFFFF"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.864"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintVertical_bias="0.095" />
 
     <TextView
         android:id="@+id/textValue"
@@ -70,38 +73,38 @@
         android:shadowColor="#FFFFFF"
         android:text="@string/money_total"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.106" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="140dp"
-        android:layout_height="238dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="228dp"
+        android:layout_height="322dp"
+        android:layout_marginTop="180dp"
         android:contentDescription="Icone de um dinheiro"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/coin_2558676_960_720_removebg_preview" />
 
-
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="82dp"
-        android:layout_height="148dp"
+        android:layout_width="130dp"
+        android:layout_height="169dp"
         android:contentDescription="icone de pessoas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumberDecimal"
-        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintHorizontal_bias="0.664"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408"
+        app:layout_constraintVertical_bias="0.396"
         app:srcCompat="@drawable/associados_acpb_removebg_preview" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -113,10 +116,10 @@
         android:contentDescription="ouvir o valor a ser dividido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textValue"
-        app:layout_constraintVertical_bias="0.009"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/_75" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -129,7 +132,7 @@
         android:contentDescription="compartilhar informações do resultado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/audio"
-        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textValue"
         app:layout_constraintVertical_bias="0.0"

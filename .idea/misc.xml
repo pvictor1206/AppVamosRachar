@@ -5,6 +5,10 @@
       <map>
         <entry key="..\:/Users/paulo/OneDrive/Documentos/projetos/AppVamosRachar/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/paulo/OneDrive/Documentos/projetos/AppVamosRachar/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1484375" />
+        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout-large-land/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout-large/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.35572916666666665" />
       </map>
     </option>
   </component>
