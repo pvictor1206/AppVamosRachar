@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#906AD3"
+    android:background="#8566BD"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteX="15dp"
 
@@ -18,16 +18,16 @@
         android:contentDescription="Bem vindo ao Vamos Rachar!"
         android:text="@string/vamos_nrachar"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="80sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.074" />
+        app:layout_constraintVertical_bias="0.069" />
 
     <EditText
         android:id="@+id/editTextNumber"
@@ -73,60 +73,61 @@
         android:shadowColor="#FFFFFF"
         android:text="@string/money_total"
         android:textColor="#FFFFFF"
-        android:textSize="60sp"
+        android:textSize="80sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.685" />
+        app:layout_constraintVertical_bias="0.774" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="324dp"
-        android:layout_height="289dp"
+        android:layout_width="292dp"
+        android:layout_height="262dp"
         android:contentDescription="Icone de um dinheiro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
-        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toEndOf="@+id/compartilhar"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.293"
+        app:layout_constraintVertical_bias="0.336"
         app:srcCompat="@drawable/coin_2558676_960_720_removebg_preview" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="161dp"
-        android:layout_height="213dp"
+        android:layout_width="143dp"
+        android:layout_height="188dp"
         android:layout_marginEnd="4dp"
         android:contentDescription="icone de pessoas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumberDecimal"
-        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintHorizontal_bias="0.683"
         app:layout_constraintStart_toEndOf="@+id/audio"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574"
+        app:layout_constraintVertical_bias="0.628"
         app:srcCompat="@drawable/associados_acpb_removebg_preview" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/audio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:clickable="true"
         android:contentDescription="ouvir o valor a ser dividido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumberDecimal"
-        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintHorizontal_bias="0.244"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592"
+        app:layout_constraintVertical_bias="0.629"
+        app:maxImageSize="120dp"
         app:srcCompat="@drawable/_75" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/compartilhar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:clickable="true"
         android:contentDescription="compartilhar informações do resultado"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -135,6 +136,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.336"
+        app:maxImageSize="120dp"
         app:srcCompat="@android:drawable/ic_menu_share" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
