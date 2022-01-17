@@ -4,20 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.View
-import android.widget.EditText
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
+import com.example.appvamosrachar.presenter.IPresenter
+import com.example.appvamosrachar.presenter.Presenter
+import com.example.appvamosrachar.view.AppView
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.NumberFormatException
 import java.util.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener, AppView {
 
-    lateinit var moneyAct: EditText
-    lateinit var peopleAct: EditText
+    internal  lateinit var viewPresenter: IPresenter
+
+
+
     lateinit var mTTS: TextToSpeech
 
     var som_string = "err"
@@ -28,11 +27,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        //MVP
+        //Model -> Modelo data
+        //View -> UI
+        //Presenter -> Conexão entre Model/data com a View
+
+
+
         audio.setOnClickListener(this)
 
-        moneyAct = findViewById(R.id.editTextNumber)
-        peopleAct = findViewById(R.id.editTextNumberDecimal)
+        viewPresenter = Presenter(this)
 
+
+        buttonCalcular.setOnClickListener {
+            (viewPresenter as Presenter).onPresent(editTextNumber.text,editTextNumberDecimal.text)
+        }
 
         compartilhar.setOnClickListener{
 
@@ -47,70 +57,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(Intent.createChooser(intent, "Share to : "))
 
         }
-
-
-
-        moneyAct.addTextChangedListener(object : TextWatcher{
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-
-            override fun afterTextChanged(p0: Editable?) {
-
-
-
-                try{
-                    val totalValue = editTextNumber.text.toString().toFloat() / editTextNumberDecimal.text.toString().toFloat()
-                    textValue.text = "R$: ${"%.2f".format(totalValue)}"
-
-                    som_string = "$totalValue"
-                    mensagem = "$totalValue"
-
-
-
-
-                }catch (nfe: NumberFormatException){
-                    textValue.text = "R$: 0,00"
-                }
-
-
-
-
-
-            }
-
-        })
-
-
-        peopleAct.addTextChangedListener(object : TextWatcher{
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-
-            override fun afterTextChanged(p0: Editable?) {
-                try{
-                    val totalValue = editTextNumber.text.toString().toFloat() / editTextNumberDecimal.text.toString().toFloat()
-                    textValue.text = "R$: ${"%.2f".format(totalValue)}"
-
-                    som_string = "$totalValue"
-                    mensagem = "$totalValue"
-
-                }catch (nfe: NumberFormatException){
-                    textValue.text = "R$: 0.00"
-                }
-
-            }
-
-        })
-
 
     }
 
@@ -141,8 +87,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    override fun onResult(res: String) {
+        mensagem = res
+        mensagem = res
+        textValue.text = res
 
-
+    }
 
 
 }
